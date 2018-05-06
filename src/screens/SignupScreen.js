@@ -9,7 +9,6 @@ class SignupScreen extends React.Component {
     password: '',
   }
 
-  // eslint-disable-next-line
   handleSubmit() {
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => {

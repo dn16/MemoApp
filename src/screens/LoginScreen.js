@@ -5,11 +5,10 @@ import { NavigationActions } from 'react-navigation';
 
 class LoginScreen extends React.Component {
   state = {
-    email: 'test1@test.com',
-    password: 'testtest',
+    email: '',
+    password: '',
   }
 
-  // eslint-disable-next-line
   handleSubmit() {
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => {
@@ -21,8 +20,7 @@ class LoginScreen extends React.Component {
         });
         this.props.navigation.dispatch(resetAction);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
       });
   }
   handlePress() {

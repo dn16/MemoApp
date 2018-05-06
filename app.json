@@ -21,7 +21,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "jp.workabroad.memot"
+    },
+    "android": {
+      "package": "jp.workabroad.memot"
     }
   }
 }
